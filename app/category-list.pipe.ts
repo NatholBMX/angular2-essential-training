@@ -1,16 +1,16 @@
-import { Pipe, PipeTransform } from "@angular/core";
+import { Pipe } from '@angular/core';
 
 @Pipe({
-  name: "categoryList"
+  name: 'categoryList'
 })
-export class CategoryListPipe implements PipeTransform {
+export class CategoryListPipe {
   transform(mediaItems) {
-    const categories = [];
+    var categories = [];
     mediaItems.forEach(mediaItem => {
-      if (categories.indexOf(mediaItem.categorie) <= -1) {
+      if (categories.indexOf(mediaItem.category) <= -1) {
         categories.push(mediaItem.category);
       }
     });
-    return categories.join(", ");
+    return categories.join(', ');
   }
 }
