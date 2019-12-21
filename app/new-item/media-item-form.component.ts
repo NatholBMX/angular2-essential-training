@@ -6,13 +6,13 @@ import {
   FormBuilder
 } from "@angular/forms";
 import { Router } from "@angular/router";
-import { MediaItemService } from "./media-item.service";
-import { lookupListToken } from "./providers";
+import { MediaItemService } from "../media-item.service";
+import { lookupListToken } from "../providers";
 
 @Component({
   selector: "mw-media-item-form",
-  templateUrl: "app/media-item-form.component.html",
-  styleUrls: ["app/media-item-form.component.css"]
+  templateUrl: "app/new-item/media-item-form.component.html",
+  styleUrls: ["app/new-item/media-item-form.component.css"]
 })
 export class MediaItemFormComponent implements OnInit {
   form: FormGroup;
